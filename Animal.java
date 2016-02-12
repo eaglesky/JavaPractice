@@ -1,4 +1,6 @@
-public class Animal implements Cloneable {
+import java.io.Serializable;
+
+public class Animal implements Cloneable, Serializable {
 	protected final int age;
 	protected final int size;
 	protected Person owner;
@@ -22,8 +24,12 @@ public class Animal implements Cloneable {
 	}
 
 	public String toString() {
-		return "Age = " + age + "; Size = " + size
-				+ "; Owner = " + owner.name() + ", age = " + owner.age();
+		if (owner != null )
+			return "Age = " + age + "; Size = " + size
+					+ "; Owner = " + owner.name() + ", age = " + owner.age();
+		else {
+			return "Age = " + age + "; Size = " + size;
+		}
 	}
 
 	@Override public Animal clone() {
