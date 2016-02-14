@@ -17,7 +17,9 @@ public class UncheckedExceptionTest {
 	// Comment the try-catch block out if you want to see the propagation of execption
 	private static Person invokeGetAnimalOwner(Animal animal) {
 		try {
-			return getAnimalOwner(animal);
+			Person owner = getAnimalOwner(animal);
+			System.out.println("This should never be executed!");
+			return owner;
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("Caught runtime exception!");
