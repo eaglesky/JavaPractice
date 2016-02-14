@@ -2,7 +2,7 @@ import java.io.*;
 
 // Test serializing a class with non-serializable field of null value 
 // If the Person field in Animal class is non-serializable and its value is null, 
-// the Animal object can still be serialized without throwing NotSeri;alizableException
+// the Animal object can still be serialized without throwing NotSerializableException
 // However if Person is not null(animal1.setOwner(..)) is called, then that exception will be thrown.
 // To resolve it, just declare Person class to be Serializable.
 public class SerializeNullTest {
