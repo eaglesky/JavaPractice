@@ -6,6 +6,6 @@ class CastTest {
 		System.out.println("Animal 2 is " + animal2.getClass());
 		System.out.println(animal2);
 		Cat cat2 = (Cat)animal2;
-		Cat cat1 = (Cat)animal1; //Throws ClassCastException
+		Cat cat1 = (Cat)animal1; //Throws ClassCastException at run time
 	}
 }
