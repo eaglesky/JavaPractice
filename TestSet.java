@@ -29,7 +29,14 @@ public class TestSet {
 			System.out.println("5 is not in the set!");
 		}
 
+		//1, 3, 7
 		for (int i : testSet)
 			System.out.println(i);
+
+		//Test iterator
+		//Iterator.next() method advances the iterator to the next element
+		Iterator iter = testSet.iterator();
+		System.out.println("Value returned by the current iterator = " + iter.next());
+		System.out.println("Value returned by the current iterator = " + iter.next());
 	}
 }
