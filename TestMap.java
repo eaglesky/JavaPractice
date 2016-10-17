@@ -23,5 +23,7 @@ public class TestMap {
 			System.out.println(entry.getKey() + ": " + entry.getValue());
 		}
 
+		System.out.println("Anna: " + testMap.getOrDefault("Anna", 0));
+		System.out.println("Jack: " + testMap.getOrDefault("Jack", 0));
 	}
 }
