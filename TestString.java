@@ -67,10 +67,26 @@ public class TestString {
 		System.out.println("Modified: " + modified);
 	}
 
+    private static void testOtherMethods() {
+        String str1 = "allen chin is a hero";
+        int pos1 = str1.indexOf('a');
+        //Should be 0
+        System.out.println("Index of a in " + str1 + " after 0 is " + pos1);
+
+        int pos2 = str1.indexOf('a', 3);
+        //Should be 14
+        System.out.println("Index of a in " + str1 + " after 3 is " + pos2);
+
+        int pos3 = str1.indexOf('z');
+        //Should be -1
+        System.out.println("Index of z in " + str1 + "  is " + pos3);
+    }
+
 	public static void main(String[] args) {
 		stringDemo();
 		System.out.println("");
 		stringBuilderDemo();
 		modifyString("Allen Chin");
+        testOtherMethods();
 	}
 }

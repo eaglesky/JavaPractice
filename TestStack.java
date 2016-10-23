@@ -20,8 +20,24 @@ public class TestStack {
 		st2.push(5);
 		st2.push(7);
 
-		while(st2.peek() != null) {
-			System.out.println(st2.pop());
+		System.out.println("Iterating the ArrayDeque:");
+		// Output should be "7, 5, 3, 1,"
+		for(Iterator<Integer> iter = st2.iterator(); iter.hasNext();) {
+			System.out.print(iter.next() + ", ");
 		}
+		System.out.println("");
+
+		System.out.println("Iterating the ArrayDeque reversely:");
+		// Output should be "1, 3, 5, 7,"
+		for(Iterator descItr = st2.descendingIterator();descItr.hasNext();) {
+			System.out.print(descItr.next() + ", ");
+		}
+		System.out.println("");
+
+		System.out.println("Popping out all the elements:");
+		while(st2.peek() != null) {
+			System.out.print(st2.pop() + ", ");
+		}
+		System.out.println("");
 	}
 }

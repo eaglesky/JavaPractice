@@ -2,9 +2,7 @@ import java.util.ArrayList;
 
 public class TestArrayList {
 	public static void main (String[] args) {
-		int a1 = 3;
-		int a2 = 5;
-		int a3 = 7;
+		int a1 = 3, a2 = 5, a3 = 7;
 		ArrayList<Integer> arr = new ArrayList<Integer>();
 		arr.add(a1);
 		arr.add(a2);
