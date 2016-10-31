@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class TestArrayList {
 	public static void main (String[] args) {
@@ -17,6 +18,15 @@ public class TestArrayList {
 			System.out.print(arr.get(i) + " ");
 		}
 		System.out.println("");
+
+		Collections.reverse(arr);
+		System.out.println("After reversing the original arraylist: ");
+		for (int a : arr)
+		{
+			System.out.print(a + " ");
+		}
+		System.out.println("");
+		
 		System.out.println("arr contains a1 ? " + arr.contains(3));
 		System.out.println("Index of a1 : " + arr.indexOf(a1));
 	}
