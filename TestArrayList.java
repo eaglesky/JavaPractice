@@ -1,7 +1,10 @@
+import java.util.List;
 import java.util.ArrayList;
 import java.util.Collections;
 
 public class TestArrayList {
+
+
 	public static void main (String[] args) {
 		int a1 = 3, a2 = 5, a3 = 7;
 		ArrayList<Integer> arr = new ArrayList<Integer>();
@@ -29,5 +32,9 @@ public class TestArrayList {
 		
 		System.out.println("arr contains a1 ? " + arr.contains(3));
 		System.out.println("Index of a1 : " + arr.indexOf(a1));
+
+		List<Integer> arrClone = new ArrayList<>(arr);
+		System.out.println("arrClone:");
+		System.out.println(arrClone);
 	}
 }
