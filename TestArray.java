@@ -25,5 +25,7 @@ public class TestArray {
 		
 		int[] arr2 = returnArray(2, 4, 6);
 		printArray(arr2);
+
+		System.out.println("Second element = " + arr[1]);
 	}
 }
