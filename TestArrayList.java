@@ -36,5 +36,11 @@ public class TestArrayList {
 		List<Integer> arrClone = new ArrayList<>(arr);
 		System.out.println("arrClone:");
 		System.out.println(arrClone);
+
+		List<Object> objectArray = new ArrayList<>();
+		objectArray.add(new Cat(1, 2, 3));
+		objectArray.add(new Animal());
+		objectArray.add(new Person("Allen", 23));
+		System.out.println(objectArray);
 	}
 }
