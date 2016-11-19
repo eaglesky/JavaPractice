@@ -82,11 +82,21 @@ public class TestString {
         System.out.println("Index of z in " + str1 + "  is " + pos3);
     }
 
+    private static void testTrimming() {
+        String str1 = " asdf ";
+        String str2 = "f sdfs ";
+        String str3 = " jj./asf/fd  ";
+        System.out.println("str1.trim()=" + str1.trim() + '#');
+        System.out.println("str2.trim()=" + str2.trim() + '#');
+        System.out.println("str3.trim()=" + str3.trim() + '#');
+    }
+
 	public static void main(String[] args) {
 		stringDemo();
 		System.out.println("");
 		stringBuilderDemo();
 		modifyString("Allen Chin");
         testOtherMethods();
+        testTrimming();
 	}
 }
