@@ -27,5 +27,8 @@ public class TestArray {
 		printArray(arr2);
 
 		System.out.println("Second element = " + arr[1]);
+
+		int[] arr3 = new int[4];
+		printArray(arr3);
 	}
 }
