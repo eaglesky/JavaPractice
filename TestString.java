@@ -91,6 +91,16 @@ public class TestString {
         System.out.println("str3.trim()=" + str3.trim() + '#');
     }
 
+    private static void testSubstring() {
+        String s = "allen";
+        System.out.println("Testing substrings of " + s);
+        System.out.println("0, 1: " + s.substring(0, 1));
+        System.out.println("0, 0: " + s.substring(0, 0));
+        System.out.println("4, : " + s.substring(4));
+        System.out.println("4, 4: " + s.substring(4, 4));
+        System.out.println("5, : " + s.substring(5));
+    }
+
 	public static void main(String[] args) {
 		stringDemo();
 		System.out.println("");
@@ -98,5 +108,6 @@ public class TestString {
 		modifyString("Allen Chin");
         testOtherMethods();
         testTrimming();
+        testSubstring();
 	}
 }
