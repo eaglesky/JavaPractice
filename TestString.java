@@ -47,13 +47,17 @@ public class TestString {
         }
         String result = sb2.toString();
         System.out.println(result);
+
+        sb2.setCharAt(2, 'l');
+        sb2.setCharAt(7, 'j');
+        System.out.println(sb2);
 	}
 
 	// StringBuilder is essentially a wrapper of char[],
 	// with some additional funtionalities including resizing the char array.
 	// If char array can do the job then we should just use char array
 	private static void modifyString(String str) {
-		char[] chars = str.toCharArray();
+		char[] chars = str.toCharArray(); //Returns a deep copy of the char array in the string
 		for (char c : chars) {
 			System.out.print(c);
 		}
@@ -63,7 +67,7 @@ public class TestString {
 				chars[i] = '#';
 			}
 		}
-		String modified = String.valueOf(chars);
+		String modified = String.valueOf(chars); //Create a new string with a deep copy of chars array
 		System.out.println("Modified: " + modified);
 	}
 
