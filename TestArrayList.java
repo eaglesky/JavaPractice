@@ -33,7 +33,7 @@ public class TestArrayList {
 		System.out.println("arr contains a1 ? " + arr.contains(3));
 		System.out.println("Index of a1 : " + arr.indexOf(a1));
 
-		List<Integer> arrClone = new ArrayList<>(arr);
+		List<Integer> arrClone = new ArrayList<>(arr); //shallow copy
 		System.out.println("arrClone:");
 		System.out.println(arrClone);
 
