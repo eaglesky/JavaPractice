@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class TestArray {
 
 	private static int[] returnArray(int a, int b, int c) {
@@ -30,5 +32,16 @@ public class TestArray {
 
 		int[] arr3 = new int[4];
 		printArray(arr3);
+
+		List<Integer> convertedList = Arrays.asList(4, 5, 6);
+		System.out.println("Converted List = " + convertedList);
+		Integer[] arr4 = {7, 8, 9}; //not int[]!
+		convertedList = Arrays.asList(arr4);
+		System.out.println("Converted List = " + convertedList);
+		//If the content of arr4 changes, so does that of the convertedList,
+		//because Arrays.asList returns a wrapper of original array, not a copy.
+		arr4[0] = -1;
+		System.out.println("Converted List = " + convertedList);
+
 	}
 }
