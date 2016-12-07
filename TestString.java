@@ -25,7 +25,7 @@ public class TestString {
         }
         
         String reversePalindrome =
-            new String(charArray);
+            new String(charArray); //Wrapping a deep copy of the original charArray
         System.out.println(reversePalindrome);
 	}
 
