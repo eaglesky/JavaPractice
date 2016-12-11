@@ -43,5 +43,16 @@ public class TestArray {
 		arr4[0] = -1;
 		System.out.println("Converted List = " + convertedList);
 
+		//Test 2d Array:
+		int[][] nums = new int[][]{
+			{},
+			{1},
+			{1, 3, 5, 7},
+			{9, 8, 3, 11, -55},
+			{4, 4, 8, 12, 55, 3, 8, -3, 4}
+		};
+		for (int[] array : nums) {
+			System.out.println("Original array: " + Arrays.toString(array));
+		}
 	}
 }
