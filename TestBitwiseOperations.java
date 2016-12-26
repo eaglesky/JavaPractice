@@ -10,5 +10,9 @@ public class TestBitwiseOperations {
 		//There is no '<<<'
 
 		System.out.println(Integer.SIZE);
+
+		System.out.println(Integer.toBinaryString(4));
+		System.out.println(Integer.toBinaryString(-4));
+		System.out.println(Integer.toBinaryString(-5));
 	}
 }
