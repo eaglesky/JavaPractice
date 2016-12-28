@@ -44,6 +44,7 @@ public class TestArray {
 		System.out.println("Converted List = " + convertedList);
 
 		//Test 2d Array:
+		//http://stackoverflow.com/questions/12231453/syntax-for-creating-a-two-dimensional-array
 		int[][] nums = new int[][]{
 			{},
 			{1},
@@ -53,6 +54,13 @@ public class TestArray {
 		};
 		for (int[] array : nums) {
 			System.out.println("Original array: " + Arrays.toString(array));
+		}
+		int[][] nums2 = new int[4][7];
+		for (int i = 0; i < nums2.length; ++i) {
+			for (int j = 0; j < nums2[i].length; ++j) {
+				System.out.print("(" + i + ", " + j + ")=" + nums2[i][j] + "   ");
+			}
+			System.out.println("");
 		}
 	}
 }
