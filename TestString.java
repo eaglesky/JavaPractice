@@ -68,6 +68,8 @@ public class TestString {
 			}
 		}
 		String modified = String.valueOf(chars); //Create a new string with a deep copy of chars array
+                                                 //Essentially calls new String(chars)
+
 		System.out.println("Modified: " + modified);
 	}
 
