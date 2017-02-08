@@ -62,5 +62,26 @@ public class TestArray {
 			}
 			System.out.println("");
 		}
+
+		//Array of super types
+		Animal[] animals = new Animal[3];
+		for (int i = 0; i < animals.length; ++i) {
+			animals[i] = new Cat(i, i*2, i+3);
+		}
+		for (Animal animal : animals) {
+			//Should output cat's info
+			System.out.println("Animal = " + animal);
+		}
+
+		//Cast array of T to array of T's super class
+		Cat[] cats = new Cat[3];
+		for (int i = 0; i < cats.length; ++i) {
+			cats[i] = new Cat(i, i*3, i+4);
+		}
+		Animal[] newAnimals = (Animal[])cats;
+		for (Animal newAnimal : newAnimals) {
+			//Should output cat's info too
+			System.out.println("New animal = " + newAnimal);
+		}
 	}
 }
