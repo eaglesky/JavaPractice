@@ -107,6 +107,11 @@ public class TestString {
         System.out.println("5, : " + s.substring(5));
     }
 
+    private static void testParsing() {
+        String s = "104"; //Throw error if there are blanks in the string
+        System.out.println(Integer.parseInt(s));
+    }
+
 	public static void main(String[] args) {
 		stringDemo();
 		System.out.println("");
@@ -115,5 +120,6 @@ public class TestString {
         testOtherMethods();
         testTrimming();
         testSubstring();
+        testParsing();
 	}
 }
