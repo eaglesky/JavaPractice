@@ -110,6 +110,10 @@ public class TestString {
     private static void testParsing() {
         String s = "104"; //Throw error if there are blanks in the string
         System.out.println(Integer.parseInt(s));
+
+        int i = -67;
+        s = String.valueOf(i);
+        System.out.println(s);
     }
 
 	public static void main(String[] args) {
