@@ -16,6 +16,9 @@ class TestListIterator {
 		}
 
 		System.out.println("\nTraversing the list in backward direction:");
+		//If without previous iteration, we should create iter like this:
+		//iter = l1.listIterator(l1.size()), so that iter points to the position
+		//right after the last element.
     	while (iter.hasPrevious()){
        		System.out.println(iter.previousIndex() + ": " + iter.previous());
     	}
