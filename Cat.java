@@ -9,8 +9,7 @@ public class Cat extends Animal implements Serializable {
 	}
 
 	public String toString() {
-		return "Age = " + age
-		       + ", Size = " + size
+		return super.toString()
 			   + ", tailSize = " + tailSize;
 	}
 }

@@ -9,7 +9,13 @@ public class SerializeTest {
 	public static void main (String[] args) {
 		Animal animal1 = new Cat(10, 30, 20);
 
+		//If person is not null, there will be NotSerializableException when serializing animal1.
+		//animal1.setOwner(new Person("Yalun", 20));
+
 		byte[] animalBytes = null;
+
+		System.out.println(animal1.getClass());
+		System.out.println(animal1.toString());
 
 		try {
 			ByteArrayOutputStream bos = new ByteArrayOutputStream();
