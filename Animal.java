@@ -1,6 +1,6 @@
 import java.io.Serializable;
 
-public class Animal implements Cloneable, Serializable {
+public class Animal implements Cloneable {
 	protected final int age;
 	protected final int size;
 	protected Person owner;
