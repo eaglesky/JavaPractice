@@ -1,9 +1,8 @@
-import java.io.Serializable;
-
 public class Animal implements Cloneable {
-	protected final int age;
-	protected final int size;
+	protected int age;
+	protected int size;
 	protected Person owner;
+	protected Habitat habitat = new Habitat();
 
 	public Animal() {
 		this.age = -1;
@@ -23,12 +22,20 @@ public class Animal implements Cloneable {
 		owner = p;
 	}
 
+	public String getHabitatName() {
+		return habitat.getName();
+	}
+
+	public void setHabitatName(String name) {
+		habitat.setName(name);
+	}
+
 	public String toString() {
+		String output = "Age = " + age + "; Size = " + size + "; Habitat: " + habitat;
 		if (owner != null )
-			return "Age = " + age + "; Size = " + size
-					+ "; Owner = " + owner.name() + ", age = " + owner.age();
+			return output + "; Owner: " + owner;
 		else {
-			return "Age = " + age + "; Size = " + size;
+			return output;
 		}
 	}
 
