@@ -1,4 +1,4 @@
-class CastTest {
+class TestCast {
 	public static void main(String[] args) {
 		Animal animal1 = new Animal(5, 6);
 		Animal animal2 = new Cat(1, 2, 3);

@@ -83,5 +83,9 @@ public class TestArray {
 			//Should output cat's info too
 			System.out.println("New animal = " + newAnimal);
 		}
+
+		Object[] strings = new String[2];
+		strings[0] = "hi";   // OK
+		strings[1] = 100;    // A run-time ArrayStoreException is thrown.
 	}
 }
