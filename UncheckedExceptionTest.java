@@ -28,6 +28,20 @@ public class UncheckedExceptionTest {
 		
 	}
 
+	private static String testAfterFinally() {
+		String str = "";
+		try {
+			throw new RuntimeException("Throwed an exception inside try!");
+		} finally {
+			System.out.println("Statements inside finally");
+			str = "Finally";
+		}
+		/* This part won't be reached! It's a compilation error if you uncomment it.
+		System.out.println("Statements after finally!");
+		return str;
+		*/
+	}
+
 	public static void main(String[] args) {
 		Animal animal = null;
 		try {
@@ -37,6 +51,7 @@ public class UncheckedExceptionTest {
 			System.out.println("This statement should only be executed when " + 
 				"invokeGetAnimalOwner doesn't caught the execption");
 		}
-		
+		String testStr = testAfterFinally();
+		System.out.println("testStr = " + testStr);
 	}
 }

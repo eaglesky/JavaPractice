@@ -23,7 +23,16 @@ public class CheckedExceptionTest {
 	// If this function throws checked exceptions, they must be caught by the caller
 	// of this function, or explicitly thrown out again.
 	private static byte[] toByteArray2(Animal animal) throws InvalidClassException, 
-	NotSerializableException, IOException  {
+	NotSerializableException, IOException {
+
+		//Set checkOtherExceptions to true to see if this method can throw exceptions other than
+		//those declared in the signature -- the answer is YES! 
+		//RuntimeException inherits directly from Exception, and so does IOException, which is the
+		//superclass of InvalidClassException and NotSerializableException
+		boolean checkOtherExceptions = false;
+		if (checkOtherExceptions) {
+			throw new RuntimeException("RuntimeException in toByteArray2, not in the function signature");
+		}
 		byte[] animalBytes = null;
 
 		ByteArrayOutputStream bos = new ByteArrayOutputStream();
