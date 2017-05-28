@@ -63,6 +63,18 @@ public class TestArray {
 			System.out.println("");
 		}
 
+		//Can the length of second dimension be 0? Yes!
+		int[][] nums3 = new int[4][0];
+		//int[][] nums3 = new int[0][0]; //First dimension can also have 0 length
+		System.out.println("nums3: 4 x 0: ");
+		for (int i = 0; i < nums3.length; ++i) {
+			System.out.print("Row " + i + ": ");
+			for (int j = 0; j < nums3[i].length; ++j) {
+				System.out.print("(" + i + ", " + j + ")=" + nums3[i][j] + "   ");
+			}
+			System.out.println("");
+		}
+
 		//Array of super types
 		Animal[] animals = new Animal[3];
 		for (int i = 0; i < animals.length; ++i) {
