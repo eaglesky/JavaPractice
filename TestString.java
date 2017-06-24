@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class TestString {
 
 	private static void stringDemo() {
@@ -116,6 +118,24 @@ public class TestString {
         System.out.println(s);
     }
 
+    private static void testSplit() {
+        System.out.println("Testing String.split()..");
+        String[] strs = new String[] {
+            "/home/allen/haha", 
+            "/haha/dd/",
+            "//asd/",
+            "/ha",
+            "/haha//",
+            "/"
+        };
+        for (String str : strs) {
+            String[] splitted = str.split("/");
+            System.out.println("Original string = " + str);
+            System.out.println("Splited = " + Arrays.toString(splitted));
+            System.out.println("");
+        }
+    }
+
 	public static void main(String[] args) {
 		stringDemo();
 		System.out.println("");
@@ -125,5 +145,6 @@ public class TestString {
         testTrimming();
         testSubstring();
         testParsing();
+        testSplit();
 	}
 }
