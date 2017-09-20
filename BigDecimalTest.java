@@ -20,7 +20,7 @@ public class BigDecimalTest {
 
 		//The following will call d.toString(), which is the same as
 		//Double.toString(d) and String.valueOf(d).
-		//The actual value in d is not strictly equal to 5.1231
+		//The actual value in d is not strictly equal to 5.123
 		//due to precision lost. The value of converted string x is selected
 		//such that the actual value in d(say d_a) is the closest to x, 
 		//and x has as least number of fractional digits as possible.
