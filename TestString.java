@@ -121,12 +121,12 @@ public class TestString {
     private static void testSplit() {
         System.out.println("Testing String.split()..");
         String[] strs = new String[] {
-            "/home/allen/haha", 
-            "/haha/dd/",
-            "//asd/",
-            "/ha",
-            "/haha//",
-            "/"
+            "/home/allen/haha", // [, home, allen, haha]
+            "/haha/dd/", //[, haha, dd]
+            "//asd/", // [, , asd]
+            "/ha", //[, ha]
+            "/haha//", // [, haha]
+            "/" //[]
         };
         for (String str : strs) {
             String[] splitted = str.split("/");
