@@ -75,7 +75,10 @@ public class BigDecimalTest {
 
 		//1 / 3 = 0.333
 		System.out.println(bd4 + " / " + bd5 + " = "
-			+ bd4.divide(bd5, 3, BigDecimal.ROUND_HALF_DOWN));
+			+ bd4.divide(bd5, 3, BigDecimal.ROUND_HALF_DOWN) + ", scale = 3");
+
+		System.out.println(bd4 + " / " + bd5 + " = "
+			+ bd4.divide(bd5, 10, BigDecimal.ROUND_HALF_DOWN) + ", scale = 10");
 
 		//4.52 x -443.44893 = -2004.3891636
 		//Same as multiply(bd2, MathContext.UNLIMITED)
